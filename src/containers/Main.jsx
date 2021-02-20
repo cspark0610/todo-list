@@ -1,25 +1,20 @@
-import React from "react";
-import axios from "axios";
+import React, {Fragment} from "react";
 
-class App extends React.Component {
+import InputTodo from '../components/InputTodo';
+import ListTodo from '../components/ListTodo';
 
-  componentDidMount() {
-    // chequeamos que el pedido axios al nuestro server funcione correctamente! deberias poder ver desde la consola del browser lo siguiente: "This is your data:  api its working"
-    axios
-      .get("http://localhost:1337/api")
-        .then(response => response.data)
-        .then(data => console.log("This is your data: ", data));
-  }
+//las tags SON EN CAMELCASE SINO NO LAS TOMA
 
-  render() {
-    return (
-      <div>
-        Hello world
-      </div>
-    );
-  }
+function Main(){
 
-  
+return(
+  <Fragment>
+    <InputTodo />
+    <ListTodo />
+  </Fragment>
+    
+);
+
 }
 
-export default App;
+export default Main;
