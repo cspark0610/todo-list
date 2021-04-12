@@ -1,4 +1,6 @@
 # Integrador Senior Checkpoint
+todo list usando postgres , SQL, axios, React y Bootstrap
+
 
 Para levantar el proyecto seguir los siguientes pasos:
 

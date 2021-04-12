@@ -1,6 +1,3 @@
-// ACA ARMO UN COMPONENTE QUE me LISTE
-//QUE HAGA UN PEDIDO AXIOS.GET DE TODOS LOS todos de la db
-//primero armo lo visual y luego le doy funcionalidad
 
 import React, { Fragment, useState, useEffect } from "react";
 import axios from 'axios';
@@ -13,7 +10,7 @@ const ListTodo = () => {
         try{
             const res = await axios.get("http://localhost:1337/api/todos");
             //console.log(res.data);
-            //para poder verlo deberia tener q setear el useEffect
+            
             setTodos(res.data);
             
 
@@ -31,7 +28,7 @@ const ListTodo = () => {
             const deletedTodo = await axios.delete(`http://localhost:1337/api/todos/${id}`);
             // con fetch FUNCIONA ASI:
             //const deletedTodo = await fetch(`http://localhost:1337/api/todos/${id}`,{method :"DELETE"});
-           //console.log(deletedTodo);
+           console.log(deletedTodo);
             
             setTodos(todos.filter(todo => todo.tid !== id));
            // console.log(todos);
